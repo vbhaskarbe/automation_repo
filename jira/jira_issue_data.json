@@ -1,0 +1,14 @@
+{
+    "fields": {
+       "summary": "RESTAPI: Regression has failed for BUILD_TAG",
+       "issuetype": {
+          "name": "Bug"
+       },
+       "project":
+       {
+          "key": "VBRHDVTRAI"
+       },
+	   "description": "Regression tests have failed for the build BUILD_TAG. Access logs HERE and triage and fix."
+	}
+}
+
