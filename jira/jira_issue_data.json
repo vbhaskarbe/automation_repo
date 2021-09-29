@@ -1,6 +1,6 @@
 {
     "fields": {
-       "summary": "RESTAPI: Regression has failed for release_1.0_29092021",
+       "summary": "RESTAPI: Regression has failed for BUILD_TAG",
        "issuetype": {
           "name": "Bug"
        },
@@ -8,9 +8,7 @@
        {
           "key": "VBRHDVTRAI"
        },
-	   "description": "Regression tests have failed for the build release_1.0_20092021. Access logs HERE and triage and fix."
+	   "description": "Regression tests have failed for the build BUILD_TAG. Access logs HERE and triage and fix."
 	}
 }
-
-
 
