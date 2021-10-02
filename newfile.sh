@@ -12,3 +12,4 @@ merge
 
 conflict
 
+another user added same file
