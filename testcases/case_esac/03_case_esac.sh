@@ -18,8 +18,7 @@ case "$TOOL" in
    ;;
    "sonarqube") echo "sonarqube is code coverage and static analysis tool"
    ;;
-   "*") echo "invalid tool $TOOL. valid inputs are: jenkins, git, jira, sonarqube."
+   *) echo "invalid tool $TOOL. valid inputs are: jenkins, git, jira, sonarqube."
    ;;
 esac
-
 
