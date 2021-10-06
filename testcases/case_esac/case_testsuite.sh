@@ -19,7 +19,9 @@ do
 	bash $testcase
 done
 
-if test ls *.fail
+failcases=`ls -1 *.flac 2>/dev/null | wc -l`
+
+if test $failcases != 0
 then
 	echo "WARNING: There is failures in this run"
 	exit 1
