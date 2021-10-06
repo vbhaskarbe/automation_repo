@@ -19,7 +19,7 @@ do
 	bash $testcase
 done
 
-failcases=`ls -1 *.flac 2>/dev/null | wc -l`
+failcases=`ls -1 *.fail 2>/dev/null | wc -l`
 
 if test $failcases != 0
 then
