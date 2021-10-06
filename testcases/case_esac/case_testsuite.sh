@@ -21,7 +21,9 @@ done
 
 if test ls *.fail
 then
+	echo "WARNING: There is failures in this run"
 	exit 1
 else
+	echo "INFO: All tests have passed for this run"
 	exit 0
 fi
