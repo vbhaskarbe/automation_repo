@@ -18,3 +18,10 @@ do
 	echo "Executing testcase $testcase...."
 	bash $testcase
 done
+
+if test ls *.fail
+then
+	exit 1
+else
+	exit 0
+fi
