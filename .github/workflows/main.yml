@@ -36,4 +36,4 @@ jobs:
           ls
           cd testcases/case_esac
           bash case_testsuite.sh
-          exit 0
+          
