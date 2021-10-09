@@ -19,13 +19,3 @@ do
 	bash $testcase
 done
 
-failcases=`ls -1 *.fail 2>/dev/null | wc -l`
-
-if test $failcases != 0
-then
-	echo "WARNING: There are failures in this run"
-	exit 1
-else
-	echo "INFO: All tests have passed for this run"
-	exit 0
-fi
