@@ -8,12 +8,6 @@
 
 #echo "Enter a tool (jenkins, jira, git, sonarqube): "
 #read TOOL
-if test $# -eq 0
-then
-	echo "ERROR: At least one argument is required for this script"
-	exit
-fi
-
 TOOL=$1
 case "$TOOL" in
    "jenkins") echo "jenkins is a CI/CD tool."
@@ -24,7 +18,7 @@ case "$TOOL" in
    ;;
    "sonarqube") echo "sonarqube is code coverage and static analysis tool"
    ;;
-   *) echo "invalid tool $TOOL. valid inputs are: jenkins, git, jira, sonarqube."
+   "*") echo "invalid tool $TOOL. valid inputs are: jenkins, git, jira, sonarqube."
    ;;
 esac
 
