@@ -1,19 +1,28 @@
+#!/usr/local/bin/python
+## Author : Bhaskar Varadaraju
+##
+## A Python script to update results in Testrails for given project and run id
+##
+
 from testrail import *
 from pprint import pprint
 import os.path
 import json  
 
-tr_project_name = 'Training_Demo'
-tr_testrun_name = 'Test_Run_003'
-tr_project_id   = -1
-tr_testrun_id   = -1
-tr_run_results  = {}
-
+## Testrails Url and credentials
 client          = APIClient('https://vbhaskar.testrail.io')
 client.user     = 'vbhaskarmtech@gmail.com'
 client.password = 'dF4pT57vrDXXSxA'
 
-tr_results_file = open('testrails_results.txt', 'r')
+## The Project name and Run name to update results
+tr_project_name = 'Training_Demo'
+tr_testrun_name = 'Test_Run_003'
+
+tr_project_id   = -1
+tr_testrun_id   = -1
+tr_run_results  = {}
+
+tr_results_file = open('./testrails_results.txt', 'r')
 for line in tr_results_file:
     tr_case_pair = line.rstrip().split(":")
     tr_run_results[tr_case_pair[0]] = tr_case_pair[1]
