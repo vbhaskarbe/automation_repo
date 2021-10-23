@@ -15,8 +15,10 @@ client.user     = 'vbhaskarmtech@gmail.com'
 client.password = 'dF4pT57vrDXXSxA'
 
 ## The Project name and Run name to update results
-tr_project_name = 'Training_Demo'
-tr_testrun_name = 'Test_Run_003'
+#EX:tr_project_name = 'Training_Demo'
+#EX:tr_testrun_name = 'Test_Run_003'
+tr_project_name = 'TR_PROJECT_NAME'
+tr_testrun_name = 'TR_TESTRUN_NAME'
 
 tr_project_id   = -1
 tr_testrun_id   = -1
