@@ -5,7 +5,6 @@
 #
 # Execute is as : bash 03_case_esac.sh <option> 
 #TOOL="jenkins"
-
 #echo "Enter a tool (jenkins, jira, git, sonarqube): "
 #read TOOL
 if test $# -eq 0
@@ -24,7 +23,7 @@ case "$TOOL" in
    ;;
    "sonarqube") echo "sonarqube is code coverage and static analysis tool"
    ;;
-   *) echo "invalid tool $TOOL. valid inputs are: jenkins, git, jira, sonarqube."
+   "*") echo "invalid tool $TOOL. valid inputs are: jenkins, git, jira, sonarqube."
    ;;
 esac
 

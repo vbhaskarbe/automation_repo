@@ -5,9 +5,9 @@
 
 testname=`echo "$0" | sed 's/.sh$//'`
 
-echo "Testcase_005   : Execute 03_case_esac.sh with 'querty' as input"
-tc_exp_result='invalid tool querty. valid inputs are: jenkins, git, jira, sonarqube.'
-tc_act_result=`bash 03_case_esac.sh querty`
+echo "Testcase_005   : Execute 03_case_esac.sh with 'java' as input"
+tc_exp_result='invalid tool java. valid inputs are: jenkins, git, jira, sonarqube.'
+tc_act_result=`bash 03_case_esac.sh java`
 if test "X$tc_exp_result" == "X$tc_act_result"
 then
 	echo "Testcase_005   : PASS"
