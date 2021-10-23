@@ -48,7 +48,10 @@ case = client.send_get("get_tests/%s"%(tr_testrun_id))
 for test in case['tests']:
     print("Id is %s, Caseid is %s, Title is: %s"%(test['id'], test['case_id'],test['title']))
     case_id     = test['case_id']
-    case_result = tr_run_results[str(case_id)]
+    if str(case_id) in tr_run_results.keys():
+        case_result = tr_run_results[str(case_id)]
+    else:
+        next
     case_status_id = 1
     if case_result == 'PASS':
         case_status_id = 1
