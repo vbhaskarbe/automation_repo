@@ -41,14 +41,14 @@ case = client.send_get("get_runs/%s"%(tr_project_id))
 for run in case['runs']:
     if run['name'] == tr_testrun_name:
         tr_testrun_id = run['id']
-        print("The run id of the given run name %s for project %s is: %s"%(tr_testrun_name, tr_project_name, tr_testrun_id))
+        print("The run id of the given run name %s is: %s"%(tr_testrun_name, tr_testrun_id))
 
 ## Find all the tests from the given run id
 case = client.send_get("get_tests/%s"%(tr_testrun_id))
 for test in case['tests']:
-    print("Id is %s, Caseid is %s, Title is: %s"%(test['id'], test['case_id'],test['title']))
     case_id     = test['case_id']
     if str(case_id) in tr_run_results.keys():
+        print("Id is %s, Caseid is %s, Title is: %s"%(test['id'], test['case_id'],test['title']))
         case_result = tr_run_results[str(case_id)]
     else:
         next
