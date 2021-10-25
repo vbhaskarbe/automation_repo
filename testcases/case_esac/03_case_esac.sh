@@ -14,14 +14,14 @@ then
 fi
 
 TOOL=$1
-case "$TOOL" in
-   "jenkins") echo "jenkins is a CI/CD tool."
+case "`echo $TOOL|tr '[A-Z]' '[a-z]'`" in
+   "jenkins") echo "$TOOL is a CI/CD tool."
    ;;
-   "jira") echo "jira is a bug reporting and agile tool." 
+   "jira") echo "$TOOL is a bug reporting and agile tool."
    ;;
-   "git") echo "git is one of source-control management tool." 
+   "git") echo "$TOOL is one of source-control management tool." 
    ;;
-   "sonarqube") echo "sonarqube is code coverage and static analysis tool"
+   "sonarqube") echo "$TOOL is code coverage and static analysis tool"
    ;;
    "*") echo "invalid tool $TOOL. valid inputs are: jenkins, git, jira, sonarqube."
    ;;

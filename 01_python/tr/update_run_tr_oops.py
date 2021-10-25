@@ -1,7 +1,8 @@
 #!/usr/local/bin/python
 ## Author : Bhaskar Varadaraju
 ##
-## A Python script to update results in Testrails for given project and run id
+##  A Python OOPs script to update jenkins test run results in Testrails
+## for given project and run id
 ##
 
 from testrail import *
@@ -37,7 +38,7 @@ class UpdateResultsInTestRails():
         for project in case['projects']:
             if project['name'] == self.tr_project_name:
                 self.tr_project_id = project['id']
-                print("The Project id of the project named %s is: %s" %(self.tr_project_name, self.tr_project_id))
+                print("The Project id of the Project '%s' is: %s" %(self.tr_project_name, self.tr_project_id))
 
     ## Get all run id from above project for given run name - tr_testrun_name
     def find_run_id_for_name(self):
@@ -45,7 +46,7 @@ class UpdateResultsInTestRails():
         for run in case['runs']:
             if run['name'] == self.tr_testrun_name:
                 self.tr_testrun_id = run['id']
-                print("The Run id of the given run name %s is: %s"%(self.tr_testrun_name, self.tr_testrun_id))
+                print("The Run id of the given Run '%s' is: %s"%(self.tr_testrun_name, self.tr_testrun_id))
         
     ## Get all the tests from the given run id
     def update_results_for_runid(self):
@@ -60,7 +61,7 @@ class UpdateResultsInTestRails():
             ## Update results for the Run in the given project    
             result = self.tr_client.send_post( "add_result_for_case/%s/%s"%(self.tr_testrun_id, case_id),
         	            { 'status_id': case_status_id, 'comment': 'This test has been verified successfully.' } )
-
+## Test/Use above locally
 if __name__ == '__main__':
     tr_handler = UpdateResultsInTestRails(
                     tr_url   = 'https://vbhaskar.testrail.io',
@@ -72,10 +73,8 @@ if __name__ == '__main__':
                     tr_testrun_name = 'Test_Run_004',
                     tr_results_file = './testrails_results.txt'
                 )
-
     tr_handler.load_test_results_in_dict()
     tr_handler.find_project_id_for_name()
     tr_handler.find_run_id_for_name()
     tr_handler.update_results_for_runid()
-    
 ## End of file
