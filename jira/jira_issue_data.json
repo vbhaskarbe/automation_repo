@@ -8,6 +8,9 @@
        {
           "key": "VBRHDVTRAI"
        },
+	   "assignee": {
+      		"name": "avatar_04"
+       },		
 	   "description": "Regression tests have failed for the build BUILD_TAG. Access logs HERE and triage and fix."
 	}
 }
